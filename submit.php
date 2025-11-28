@@ -1,52 +1,33 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-
 $fullname = $_POST['fullname'];
 $email = $_POST['email'];
-$code = $_POST['country_code'];
 $phone = $_POST['phone'];
-$gender = $_POST['gender'];
 $dob = $_POST['dob'];
+$gender = $_POST['gender'];
 $address = $_POST['address'];
-$course = $_POST['course'];
+?>
 
-echo "<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Success</title>
-<style>
-body {
-    font-family: Arial;
-    background: #f2f2f2;
-}
-.box {
-    background: white;
-    width: 400px;
-    padding: 20px;
-    margin: 50px auto;
-    border-radius: 10px;
-}
-h2 {
-    color: green;
-}
-</style>
+    <title>Application Submitted</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class='box'>
-<h2>Application Submitted Successfully ✅</h2>
+<h1>Application Submitted Successfully</h1>
 
-<p><b>Name:</b> $fullname</p>
-<p><b>Email:</b> $email</p>
-<p><b>Phone:</b> $code $phone</p>
-<p><b>Gender:</b> $gender</p>
-<p><b>DOB:</b> $dob</p>
-<p><b>Address:</b> $address</p>
-<p><b>Course:</b> $course</p>
+<div style="background:#fff; padding:20px; width:400px; border-radius:10px; box-shadow:0px 0px 10px #999;">
+
+    <p><strong>Full Name:</strong> <?php echo $fullname; ?></p>
+    <p><strong>Email:</strong> <?php echo $email; ?></p>
+    <p><strong>Phone:</strong> <?php echo $phone; ?></p>
+    <p><strong>Date of Birth:</strong> <?php echo $dob; ?></p>
+    <p><strong>Gender:</strong> <?php echo $gender; ?></p>
+    <p><strong>Address:</strong> <?php echo nl2br($address); ?></p>
 
 </div>
-</body>
-</html>";
 
-}
-?>
+</body>
+</html>
