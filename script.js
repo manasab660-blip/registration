@@ -1,7 +1,3 @@
 $(document).ready(function(){
-
-    $("#regForm").on("submit", function(){
-        alert("Form submitted successfully!");
-    });
-
-});style.jss
+    console.log("Form Loaded Successfully!");
+});
