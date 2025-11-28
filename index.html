@@ -1,39 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Registration Form</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 <body>
 
-    <h1>Student Registration Form</h1>
+    <h2>Online Registration Form</h2>
 
-    <form action="submit.php" method="POST" id="regForm">
+    <form action="submit.php" method="POST">
 
-        <label>Full Name:</label>
-        <input type="text" name="fullname" required>
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
 
-        <label>Email Address:</label>
-        <input type="email" name="email" required>
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
 
-        <label>Phone Number:</label>
-        <input type="text" name="phone" required>
-
-        <label>Date of Birth:</label>
-        <input type="date" name="dob" required>
-
-        <label>Gender:</label>
-        <select name="gender" required>
-            <option value="">-- Select --</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
-
-        <label>Address:</label>
-        <textarea name="address" required></textarea>
+        <label>Phone:</label>
+        <input type="text" name="phone" required><br><br>
 
         <button type="submit">Submit Application</button>
     </form>
